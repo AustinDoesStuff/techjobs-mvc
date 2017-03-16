@@ -27,5 +27,14 @@
         </div>
     </div>
 
+    <div th:fragment="display-search" class="job-listing">
+
+        <table>
+            <tr th:each="jobMaps : ${jobs}">
+                <td th:each="jobKey : ${jobMaps.entrySet()}" th:text="${jobKey.value}"></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
